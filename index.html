@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Cat Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- cat selector template -->
+        <div class="listWrap">
+            <select name="cats" id="cat-list"></select>
+        </div>
+
+        <!-- cat view template -->
+        <div class="cat">
+            <h2 class="cat-name"></h2>
+            <img src="" alt="cute cat" class="cat-img">
+            <p>You Clicked:</p>
+            <div class="cat-count"></div>
+            <p>Times</p>
+        </div>
+
+    </div>
+    <!-- admin template area -->
+    <button class="admin-button">Admin</button>
+    <div class="admin hidden">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="imgUrl">ImgURL:</label>
+        <input type="text" id="imgUrl">
+        <label for="clicks">#Clicks:</label>
+        <input type="number" id="clicks">
+        <div class="buttons">
+            <button class="save button">Save</button>
+            <button class="cancel button">Cancel</button>
+        </div>
+    </div>
+    <footer>This Cat Clicker is a simple example of Model View Controller in plain JavaScript <span>by
+        <a href="https://github.com/rsi2940">Rishi Khatiwada</a> </span>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
