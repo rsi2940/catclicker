@@ -10,8 +10,10 @@ body {
 .wrapper {
   margin: 2em auto;
   width: 95%;
+
   display: grid;
 }
+
 .listWrap {
   width: 100%;
 }
@@ -34,6 +36,7 @@ footer {
   margin-top: 1em;
   padding: 1em;
   font-size: 0.85em;
+  grid-area: f;
 }
 .cat > img {
   margin-bottom: 0.5em;
@@ -46,15 +49,18 @@ a {
   /* position: fixed;
   top: 100px;
   left: 16px; */
+  margin-left: 0.5em;
   font-size: 1.5em;
 }
 .admin {
   /* position: fixed;
   top: 160px;
   left: 16px; */
-  margin-top: 0.5em;
+  margin: 0.5em 1em;
   display: flex;
   flex-direction: column;
+  padding: 2em;
+  box-shadow: 2px 2px 2px 2px black;
 }
 
 .admin > input {
@@ -63,6 +69,7 @@ a {
 
 .buttons {
   display: flex;
+  justify-content: space-around;
 }
 
 .button {
@@ -72,12 +79,24 @@ a {
 .hidden {
   display: none;
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 3em;
+    grid-template-areas:
+      '. . w w w w w a a a . .'
+      'f f f f f f f f f f f f';
+  }
   .wrapper {
     width: 75vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    grid-area: w;
+  }
+  .admin-panel {
+    grid-area: a;
   }
   .listWrap {
     padding-top: 4em;
@@ -98,10 +117,11 @@ a {
     position: fixed;
     top: 100px;
     left: 16px;
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   .admin {
     position: fixed;
+    padding: 1em;
     top: 160px;
     left: 16px;
     display: flex;
